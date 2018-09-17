@@ -1,0 +1,327 @@
+.device-container {
+    border: rgb(0, 167, 225) solid .15rem;
+    margin: .2rem;
+    background-color: white;
+    border-radius: .2rem;
+    height: 160px;
+}
+
+.device-status {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    right: 2rem;
+}
+
+.device-status h1 {
+    margin: 1rem 1rem;
+    font-size: 1rem;
+}
+
+.info-page-address {
+    margin: 0 1rem 0 1rem;
+}
+
+.info-page-address p {
+    font-size: 1.5rem;
+}
+
+.offline {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 0);
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 62, 62, 0.692) 0 2px 12px;
+}
+
+.online {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin: auto;
+    background-color: #ABFF00;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+}
+
+.device-header {
+    background-color: rgb(0, 167, 225);
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.device-header h1 {
+    font-size: 1.5rem;
+    padding-left: .5rem;
+}
+
+.address p {
+    padding-left: .5rem;
+}
+
+.device-info-button {
+    padding: .5rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 167, 225);
+    text-align: center;
+    margin: auto;
+    margin-left: .5rem;
+    position: absolute;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.281), 0 4px 8px rgba(0, 0, 0, 0.39);
+    border-radius: .2rem;
+}
+
+.device-info-button:hover {
+    background-color: rgb(1, 153, 204);
+}
+
+.device-info-button p {
+    margin: auto;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.device-info-sidebar {
+    height: 100vh;
+    width: 25rem;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 5rem;
+    margin: auto;
+    background-color: white;
+}
+
+.device-info-sidebar img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+
+.device-info-sidebar h1,
+h2,
+h3 {
+    margin-left: 1rem;
+}
+
+.device-zones-container {
+    margin: 2rem;
+    display: flex;
+    flex: row;
+    flex-wrap: wrap;
+    max-width: 100vw;
+}
+
+.device-zone {
+    width: 20rem;
+    height: 24rem;
+    border: rgb(0, 167, 225) solid .2rem;
+    margin: .2rem;
+}
+
+.device-zone-info {
+    max-width: 20rem;
+    height: 4.5rem;
+    background-color: rgb(0, 167, 225);
+}
+
+.device-zone-info h3 {
+    margin: auto;
+    padding: .5rem 1rem 0 1rem;
+    color: white;
+}
+
+.device-zone-img-container {
+    border-bottom: rgb(0, 167, 225) solid .2rem;
+    background-color: rgb(0, 139, 185);
+}
+
+.device-zone img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 11.2rem;
+    max-width: 20rem;
+}
+
+.device-zone-button {
+    padding: .5rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 167, 225);
+    text-align: center;
+    margin-left: 1rem;
+    position: absolute;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.281), 0 4px 8px rgba(0, 0, 0, 0.39);
+    border-radius: .2rem;
+}
+
+.device-zone-button:hover {
+    background-color: rgb(1, 153, 204);
+}
+
+.device-zone-button p {
+    margin: auto;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.device-zones-info-container {
+    border-left: rgb(0, 167, 225) solid .15rem;
+    margin-left: 25rem;
+}
+
+.weather-container {
+    max-width: 100vw;
+}
+
+.last-water-date {
+    margin: 0 1rem 0 1rem;
+    height: 3.5rem;
+}
+
+.multiple-zone-time-modal {
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.726);
+    position: fixed;
+}
+
+.multiple-zone-time-add {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    position: fixed;
+    width: 30rem;
+    height: 38rem;
+}
+
+.devices-selection {
+    height: 16rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 2rem 2rem 0rem 2rem;
+}
+
+.multiple-zone-selection-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.zone-selection-img-container {
+    height: 2rem;
+    width: 3.6rem;
+    background-color: rgb(0, 167, 225);
+}
+
+
+.zone-selection-img-container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 2rem;
+    max-width: 5rem;
+}
+
+.zone-selection-info h3 {
+    margin: auto;
+    margin-left: 1rem;
+}
+
+.time-modal {
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.726);
+    position: fixed;
+}
+
+.time-add {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    position: fixed;
+    width: 25rem;
+    height: 20rem;
+}
+
+.time-header {
+    background-color: rgb(0, 167, 225);
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.time-header h1 {
+    margin-left: .5rem;
+}
+
+.time-modal-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
+.run-zone-button {
+    padding: .5rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 167, 225);
+    text-align: center;
+    margin: auto;
+    margin: .5rem;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.281), 0 4px 8px rgba(0, 0, 0, 0.39);
+    border-radius: .2rem;
+    width: 50%;
+}
+
+.run-zone-button:hover {
+    background-color: rgb(1, 153, 204);
+}
+
+.run-zone-button p {
+    margin: auto;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.add-time-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 25%;
+    width: 25rem;
+
+}
+
+.minutes {
+    width: 10rem;
+    left: 10rem;
+}
+
+.time-button {
+    padding: .5rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 167, 225);
+    text-align: center;
+    margin: .5rem;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.281), 0 2px 4px rgba(0, 0, 0, 0.39);
+    border-radius: .2rem;
+    width: 2rem;
+    cursor: pointer;
+}
