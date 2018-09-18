@@ -6,6 +6,8 @@
     top: 0;
     right: 0;
     overflow-x: hidden;
+    transition: 0.5s;
+    /* background-color: white; */
 }
 
 .spacer {

@@ -18,9 +18,6 @@ class MultipleZoneModal extends Component {
         this.setState(prevState => ({ checkedItems: prevState.checkedItems.set(id, isChecked) }));
     }
 
-
-
-
     MultipleZoneHandleSubmit = (e) => {
         e.preventDefault();
         const runTime = this.state.time * 60;

@@ -12,6 +12,11 @@ class HomePage extends Component {
         super();
         this.state = {
             userData: null,
+            zoom: 6,
+            center: {
+                lat: 39.7392,
+                lng: -104.9903
+            }
         }
     };
 
@@ -29,6 +34,16 @@ class HomePage extends Component {
                 })
             });
     };
+
+    handleDeviceClick = (deviceClicked) => {
+        this.setState({
+            zoom: 15,
+                        center: {
+            lat: deviceClicked.lat,
+            lng: deviceClicked.lng
+        }
+        })        
+    }
 
     componentDidMount() {
         this.getUserData();
@@ -58,10 +73,13 @@ class HomePage extends Component {
                     <div className="spacer"></div>
                     <Devices
                         deviceData={this.state.userData.devices}
+                        handleDeviceClick={this.handleDeviceClick}
                     />
                 </div>
                 <DeviceMapContainer
                     devicesData={this.state.userData.devices}
+                    zoom={this.state.zoom}
+                    center={this.state.center}
                 />
             </div>
 

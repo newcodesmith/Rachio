@@ -4,24 +4,38 @@ import DeviceStatus from './DeviceStatus';
 
 class Devices extends Component {
 
+    handleClick = (deviceInfo) => {
+        const deviceClicked = {
+            lat: deviceInfo.latitude,
+            lng: deviceInfo.longitude
+        }
+        console.log(deviceClicked, "clicked");
+
+        this.props.handleDeviceClick(deviceClicked)
+    }
+
+
     render() {
         const deviceData = this.props.deviceData;
 
         return (
 
-            deviceData.sort(function(a, b) {
-                let nameA = a.name.toUpperCase(); 
-                let nameB = b.name.toUpperCase(); 
+            deviceData.sort(function (a, b) {
+                let nameA = a.name.toUpperCase();
+                let nameB = b.name.toUpperCase();
                 if (nameA < nameB) {
-                  return -1;
+                    return -1;
                 }
                 if (nameA > nameB) {
-                  return 1;
+                    return 1;
                 }
                 return 0;
-              }).map(deviceInfo => {
+            }).map(deviceInfo => {
                 return (
-                    <div key={deviceInfo.id} className='device-container'>
+                    <div key={deviceInfo.id}
+                        className='device-container'
+                        onClick={this.handleClick.bind(this, deviceInfo)}
+                    >
                         <div className='device-header'>
                             <h1>{deviceInfo.name}</h1>
                             <DeviceStatus
@@ -40,7 +54,6 @@ class Devices extends Component {
                                 <p>Device Info</p>
                             </div>
                         </div>
-
                     </div>
                 )
             })
