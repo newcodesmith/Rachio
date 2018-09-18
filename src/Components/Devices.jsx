@@ -14,7 +14,6 @@ class Devices extends Component {
         this.props.handleDeviceClick(deviceClicked)
     }
 
-
     render() {
         const deviceData = this.props.deviceData;
 
@@ -33,8 +32,8 @@ class Devices extends Component {
             }).map(deviceInfo => {
                 return (
                     <div key={deviceInfo.id}
-                        className='device-container'
                         onClick={this.handleClick.bind(this, deviceInfo)}
+                        className='device-container'
                     >
                         <div className='device-header'>
                             <h1>{deviceInfo.name}</h1>

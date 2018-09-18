@@ -3,7 +3,6 @@ import '../styles/Login.css';
 import NameLogo from '../assets/rachio-name-logo.png';
 import Logo from '../assets/rachio-logo.png';
 
-
 class Login extends Component {
     render() {
         return (

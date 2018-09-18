@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ReactWeather from 'react-open-weather';
 import 'react-open-weather/lib/css/ReactWeather.css';
 
-
 class Weather extends Component {
     render() {
         const device = this.props.device;

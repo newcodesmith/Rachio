@@ -10,8 +10,8 @@ class Header extends Component {
                     <img className="name-logo" src={NameLogo} alt="Rachio Logo" height="50px" />
                 </div>
                 <div className="nav-buttons">
-                        <p onClick={() => window.location = "/home"}>Device Map</p>
-                        <p onClick={() => window.location = "/"}>Log Out</p>
+                    <p onClick={() => window.location = "/home"}>Device Map</p>
+                    <p onClick={() => window.location = "/"}>Log Out</p>
                 </div>
             </div>
         );

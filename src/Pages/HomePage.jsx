@@ -6,7 +6,6 @@ import LoadingScreen from 'react-loading-screen';
 import Logo from '../assets/rachio-logo.png';
 import DeviceMapContainer from '../Components/DeviceMapContainer';
 
-
 class HomePage extends Component {
     constructor() {
         super();
@@ -38,17 +37,16 @@ class HomePage extends Component {
     handleDeviceClick = (deviceClicked) => {
         this.setState({
             zoom: 15,
-                        center: {
-            lat: deviceClicked.lat,
-            lng: deviceClicked.lng
-        }
-        })        
+            center: {
+                lat: deviceClicked.lat,
+                lng: deviceClicked.lng
+            }
+        })
     }
 
     componentDidMount() {
         this.getUserData();
     };
-
 
     render() {
         if (!this.state.userData) {

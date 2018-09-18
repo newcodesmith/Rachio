@@ -10,7 +10,6 @@ import Weather from "../Components/Weather";
 import OneZoneModal from '../Components/OneZoneModal';
 import MultipleZoneModal from '../Components/MultipleZoneModal';
 
-
 class DeviceInfoPage extends Component {
     constructor() {
         super();
@@ -69,8 +68,6 @@ class DeviceInfoPage extends Component {
             .catch(err => console.log(err))
             .then(() => setTimeout(() => { this.getDeviceInfo() }, 5000));
     }
-
-
 
     openOneZoneModal = (zoneId, zoneName) => {
         this.setState({ oneZoneModalIsShown: !this.state.oneZoneModalIsShown });

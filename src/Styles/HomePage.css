@@ -14,6 +14,19 @@
     height: 5rem;
 }
 
+.device-container {
+    border: rgb(0, 167, 225) solid .15rem;
+    margin: .2rem;
+    background-color: white;
+    border-radius: .2rem;
+    height: 160px;
+}
+
+.device-container:hover {
+    background-color: rgb(226, 226, 226);
+    cursor: pointer;
+}
+
 .device-status {
     position: absolute;
     display: flex;
@@ -32,7 +45,8 @@
     border-radius: 50%;
     background-color: rgb(255, 0, 0);
     margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 62, 62, 0.692) 0 2px 12px;}
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 62, 62, 0.692) 0 2px 12px;
+}
 
 .online {
     width: 1rem;
@@ -42,5 +56,4 @@
     background-color: #ABFF00;
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
-
 }

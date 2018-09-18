@@ -4,7 +4,7 @@ import RachioGen3 from '../assets/rachio-gen3.png';
 
 class DeviceImage extends Component {
     render() {
-        const deviceModel = this.props.deviceModel;        
+        const deviceModel = this.props.deviceModel;
 
         if (deviceModel === 'GENERATION2_8ZONE') {
             return (

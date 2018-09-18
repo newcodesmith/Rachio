@@ -31,9 +31,8 @@ class Address extends Component {
         this.getAddress();
     }
 
-
     render() {
-        const deviceId=this.props.deviceId
+        const deviceId = this.props.deviceId
 
         if (!this.state.address) {
             return <div />

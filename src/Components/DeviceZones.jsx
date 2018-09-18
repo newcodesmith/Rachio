@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import LastWateredDate from './LastWateredDate';
 
-
 class DeviceZones extends Component {
 
     render() {

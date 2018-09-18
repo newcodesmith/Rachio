@@ -36,6 +36,7 @@ class MultipleZoneModal extends Component {
     IncrementItem = () => {
         this.setState({ time: this.state.time + 1 });
     }
+
     DecreaseItem = () => {
         if (this.state.time === 0) {
         } else {

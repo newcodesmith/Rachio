@@ -1,11 +1,3 @@
-.device-container {
-    border: rgb(0, 167, 225) solid .15rem;
-    margin: .2rem;
-    background-color: white;
-    border-radius: .2rem;
-    height: 160px;
-}
-
 .device-status {
     position: absolute;
     display: flex;

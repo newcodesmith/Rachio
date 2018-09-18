@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Geocode from "react-geocode";
 
-
 class InfoPageAddress extends Component {
     constructor() {
         super();
@@ -31,9 +30,8 @@ class InfoPageAddress extends Component {
         this.getAddress();
     }
 
-
     render() {
-        const deviceId=this.props.deviceId
+        const deviceId = this.props.deviceId
 
         if (!this.state.address) {
             return <div />
