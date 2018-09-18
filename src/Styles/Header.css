@@ -15,3 +15,26 @@
     margin: 1rem;
     
 }
+
+.nav-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: .9rem;
+    margin-left: auto;
+}
+
+.nav-buttons p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin: .9rem;
+    text-align: center;
+    cursor: pointer;
+    list-style-type: none;
+
+  }
+  
+.nav-buttons p:hover {
+    color: #f1f1f1;
+    text-decoration: underline;
+  
+  }
