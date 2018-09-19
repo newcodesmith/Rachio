@@ -6,11 +6,6 @@
     right: 1rem;
 }
 
-.device-status h1 {
-    margin: 1rem 1rem;
-    font-size: 1rem;
-}
-
 .info-page-address {
     margin: 0 1rem 0 1rem;
 }
@@ -43,37 +38,11 @@
     display: flex;
     flex-direction: row;
     color: white;
-}
-
-.device-header h1 {
-    font-size: 1.5rem;
-    padding-left: .5rem;
+    height: 4rem;
 }
 
 .address p {
     padding-left: .5rem;
-}
-
-.device-info-button {
-    padding: .5rem;
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 167, 225);
-    text-align: center;
-    margin: auto;
-    margin-left: .5rem;
-    position: absolute;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.281), 0 4px 8px rgba(0, 0, 0, 0.39);
-    border-radius: .2rem;
-}
-
-.device-info-button:hover {
-    background-color: rgb(1, 153, 204);
-}
-
-.device-info-button p {
-    margin: auto;
-    font-size: 1rem;
-    cursor: pointer;
 }
 
 .device-info-sidebar {

@@ -89,8 +89,9 @@ class HomePage extends Component {
                 <Header
                     userName={this.state.userData.fullName}
                 />
-                <div className="spacer"></div>
                 <div className={this.state.sideBar}>
+                <div className="spacer"></div>
+
                     <div
                         onClick={this.handleClickSideBar}
                         className={this.state.sideBarButton}

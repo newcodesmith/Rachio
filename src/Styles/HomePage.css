@@ -74,8 +74,9 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.281), 0 4px 8px rgba(0, 0, 0, 0.39);
 }
 
-.device-header {
-    display: flex;
+.device-header h1 {
+    font-size: 1.5rem;
+    margin-left: .6rem;
 }
 
 .device-status {
@@ -87,8 +88,31 @@
 }
 
 .device-status h1 {
-    margin: 1.3rem 1rem;
+    margin: 1.35rem 1rem;
     font-size: 1rem;
+}
+
+.device-info-button {
+    padding: .5rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 167, 225);
+    text-align: center;
+    margin: auto;
+    margin-left: .5rem;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.281), 0 4px 8px rgba(0, 0, 0, 0.39);
+    border-radius: .2rem;
+    width: 5rem;
+}
+
+.device-info-button:hover {
+    background-color: rgb(1, 153, 204);
+}
+
+.device-info-button p {
+    margin: auto;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 .offline {
@@ -108,4 +132,8 @@
     background-color: #ABFF00;
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+}
+
+.device-map-container {
+    margin-top: 5rem;
 }
