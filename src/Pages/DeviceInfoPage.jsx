@@ -54,8 +54,6 @@ class DeviceInfoPage extends Component {
     }
 
     MultipleRunZone = (runZonesInfo) => {
-        console.log(JSON.stringify({ zones: runZonesInfo }));
-
         return fetch("https://api.rach.io/1/public/zone/start_multiple", {
             method: "PUT",
             headers: {

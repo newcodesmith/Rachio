@@ -9,8 +9,6 @@ class Devices extends Component {
             lat: deviceInfo.latitude,
             lng: deviceInfo.longitude
         }
-        console.log(deviceClicked, "clicked");
-
         this.props.handleDeviceClick(deviceClicked)
     }
 

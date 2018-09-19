@@ -6,7 +6,6 @@ class DevicesMapContainer extends Component {
     render() {
         return (
             <div>
-                <div className="spacer"></div>
                 <div className='device-map-container'>
                     <DevicesMap
                         devices={this.props.devicesData}

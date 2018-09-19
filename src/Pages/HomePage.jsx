@@ -11,6 +11,10 @@ class HomePage extends Component {
         super();
         this.state = {
             userData: null,
+            isShown: false,
+            sideBar: 'devices-sidebar-hide',
+            sideBarButton: 'device-sidebar-button-hide',
+            sideBarButtonTitle: 'Show Devices',
             zoom: 6,
             center: {
                 lat: 39.7392,
@@ -34,9 +38,27 @@ class HomePage extends Component {
             });
     };
 
+    handleClickSideBar = () => {
+        if (!this.state.isShown) {
+            this.setState({
+                isShown: true,
+                sideBar: 'devices-sidebar-show',
+                sideBarButton: 'device-sidebar-button-show',
+                sideBarButtonTitle: 'Hide Devices',
+            })
+        } else {
+            this.setState({
+                isShown: false,
+                sideBar: 'devices-sidebar-hide',
+                sideBarButton: 'device-sidebar-button-hide',
+                sideBarButtonTitle: 'Show Devices',
+            })
+        }
+    }
+
     handleDeviceClick = (deviceClicked) => {
         this.setState({
-            zoom: 15,
+            zoom: 20,
             center: {
                 lat: deviceClicked.lat,
                 lng: deviceClicked.lng
@@ -67,12 +89,21 @@ class HomePage extends Component {
                 <Header
                     userName={this.state.userData.fullName}
                 />
-                <div className="devices-sidebar">
-                    <div className="spacer"></div>
-                    <Devices
-                        deviceData={this.state.userData.devices}
-                        handleDeviceClick={this.handleDeviceClick}
-                    />
+                <div className="spacer"></div>
+                <div className={this.state.sideBar}>
+                    <div
+                        onClick={this.handleClickSideBar}
+                        className={this.state.sideBarButton}
+                    >
+                        <p>{this.state.sideBarButtonTitle}</p>
+                    </div>
+                    <div>
+                        <div className="spacer"></div>
+                        <Devices
+                            deviceData={this.state.userData.devices}
+                            handleDeviceClick={this.handleDeviceClick}
+                        />
+                    </div>
                 </div>
                 <DeviceMapContainer
                     devicesData={this.state.userData.devices}

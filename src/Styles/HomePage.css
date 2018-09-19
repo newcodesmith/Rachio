@@ -1,37 +1,89 @@
-.devices-sidebar {
+.devices-sidebar-hide,
+.devices-sidebar-show {
     height: 100vh;
-    width: 30rem; 
-    position: fixed; 
-    z-index: 1; 
+    position: fixed;
+    width: .5rem;
+    z-index: 1;
     top: 0;
     right: 0;
     overflow-x: hidden;
     transition: 0.5s;
-    /* background-color: white; */
+    display: flex;
+    flex-direction: row;
+}
+
+.devices-sidebar-show {
+    width: 30.8rem;
+}
+
+.devices-sidebar-hide {
+    width: .5rem;
 }
 
 .spacer {
     height: 5rem;
+    background-color: none;
+}
+
+.device-sidebar-button-hide,
+.device-sidebar-button-show {
+    background-color: rgb(0, 167, 225);
+    width: 4rem;
+    height:10.4rem;
+    right: 0;
+    top: 5rem;
+    margin: .2rem .5rem .3rem .2rem;
+    border-radius: .2rem;
+    position: fixed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.281), 0 4px 8px rgba(0, 0, 0, 0.39);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.device-sidebar-button-show {
+    margin: .2rem 30.9rem .3rem .2rem;
+}
+
+.device-sidebar-button-hide {
+    margin: .2rem .5rem .3rem .2rem;
+}
+
+
+.device-sidebar-button-hide p,
+.device-sidebar-button-show p {
+    transform: rotate(-90deg);
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 4rem;
 }
 
 .device-container {
-    border: rgb(0, 167, 225) solid .15rem;
+    border: rgb(0, 167, 225) solid .2rem;
     margin: .2rem;
     background-color: white;
     border-radius: .2rem;
     height: 160px;
+    width: 30rem;
+    transition: 1s;
 }
 
 .device-container:hover {
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(206, 206, 206);
     cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.281), 0 4px 8px rgba(0, 0, 0, 0.39);
+}
+
+.device-header {
+    display: flex;
 }
 
 .device-status {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: row;
-    right: 2rem;
+    margin-left: auto;
+    right: 1rem;
 }
 
 .device-status h1 {

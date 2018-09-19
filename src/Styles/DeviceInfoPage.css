@@ -1,8 +1,9 @@
 .device-status {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: row;
-    right: 2rem;
+    margin-left: auto;
+    right: 1rem;
 }
 
 .device-status h1 {
