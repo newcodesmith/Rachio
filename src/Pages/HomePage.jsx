@@ -15,10 +15,10 @@ class HomePage extends Component {
             sideBar: 'devices-sidebar-hide',
             sideBarButton: 'device-sidebar-button-hide',
             sideBarButtonTitle: 'Show Devices',
-            zoom: 6,
+            zoom:5,
             center: {
-                lat: 39.7392,
-                lng: -104.9903
+                lat: 39.0997,
+                lng: -94.5786
             }
         }
     };
