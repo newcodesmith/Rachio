@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Address from './Address';
 import DeviceStatus from './DeviceStatus';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class Devices extends Component {
 
@@ -46,9 +47,15 @@ class Devices extends Component {
                                 deviceId={deviceInfo.id}
                             />
                             <div
-                                onClick={() => window.location = "/deviceInfo?" + deviceInfo.id}
                                 className="device-info-button">
+                                <Link to={{
+                                    pathname: `/deviceInfo/${deviceInfo.id}`,
+                                    state: {
+                                        deviceInfo: deviceInfo
+                                    }
+                                }}>
                                 <p>Device Info</p>
+                                </Link>
                             </div>
                         </div>
                     </div>

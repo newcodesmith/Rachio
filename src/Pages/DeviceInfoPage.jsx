@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import queryString from "query-string"
-import LoadingScreen from 'react-loading-screen';
-import Logo from '../assets/rachio-logo.png';
 import Header from '../Components/Header';
 import DeviceInfoSideBar from '../Components/DeviceInfoSideBar';
 import '../Styles/DeviceInfoPage.css';
@@ -14,29 +11,11 @@ class DeviceInfoPage extends Component {
     constructor() {
         super();
         this.state = {
-            deviceData: null,
             zoneId: null,
             zoneName: null,
             oneZoneModalIsShown: false,
             multipleZoneModalIsShown: false
         }
-    };
-
-    getDeviceInfo = () => {
-        let parsed = queryString.parse(window.location.search)
-        let deviceId = Object.keys(parsed);
-
-        fetch("https://api.rach.io/1/public/device/" + deviceId, {
-            headers: { "Authorization": "Bearer 76980330-8f0b-4659-a341-527364acf134" }
-        })
-            .then(response => {
-                return response.json()
-            })
-            .then(data => {
-                this.setState({
-                    deviceData: data
-                })
-            });
     };
 
     runZone = (runZoneInfo) => {
@@ -87,25 +66,13 @@ class DeviceInfoPage extends Component {
     };
 
     componentWillMount() {
-        this.getDeviceInfo();
+        const { handle } = this.props.match.params
+        const { deviceInfo } = this.props.location.state.deviceInfo
     };
 
     render() {
-        const device = this.state.deviceData
+        const device = this.props.location.state.deviceInfo
 
-        if (!this.state.deviceData) {
-            return (
-                <LoadingScreen
-                    loading={true}
-                    bgColor='#00000'
-                    spinnerColor='#9ee5f8'
-                    textColor='#676767'
-                    logoSrc={Logo}
-                    text="Are you smarter than a Rachio Controller!"
-                >
-                </LoadingScreen>
-            )
-        }
         return (
 
             <div>
