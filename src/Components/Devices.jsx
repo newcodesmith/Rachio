@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Address from './Address';
 import DeviceStatus from './DeviceStatus';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Devices extends Component {
 
@@ -54,7 +54,7 @@ class Devices extends Component {
                                         deviceInfo: deviceInfo
                                     }
                                 }}>
-                                <p>Device Info</p>
+                                Device Info
                                 </Link>
                             </div>
                         </div>

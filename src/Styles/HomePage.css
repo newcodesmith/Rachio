@@ -109,10 +109,12 @@
     background-color: rgb(1, 153, 204);
 }
 
-.device-info-button p {
+.device-info-button a {
     margin: auto;
     font-size: 1rem;
     cursor: pointer;
+    text-decoration: none;
+    color: white;
 }
 
 .offline {
