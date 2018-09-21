@@ -31,7 +31,6 @@ class Devices extends Component {
             }).map(deviceInfo => {
                 return (
                     <div key={deviceInfo.id}
-                        onClick={this.handleClick.bind(this, deviceInfo)}
                         className='device-container'
                     >
                         <div className='device-header'>
@@ -46,16 +45,25 @@ class Devices extends Component {
                                 longitude={deviceInfo.longitude}
                                 deviceId={deviceInfo.id}
                             />
-                            <div
-                                className="device-info-button">
-                                <Link to={{
-                                    pathname: `/deviceInfo/${deviceInfo.id}`,
-                                    state: {
-                                        deviceInfo: deviceInfo
-                                    }
-                                }}>
-                                Device Info
+                            <div className="device-info-button-container">
+                                <div
+                                    className="device-info-button"
+                                    onClick={this.handleClick.bind(this, deviceInfo)}
+                                >
+                                    <p>Map Location</p>
+                                </div>
+                                <div
+                                    className="device-info-button">
+                                    <Link to={{
+                                        pathname: `/deviceInfo/${deviceInfo.id}`,
+                                        state: {
+                                            deviceInfo: deviceInfo
+                                        }
+                                    }}>
+                                        Device Info
                                 </Link>
+                                </div>
+
                             </div>
                         </div>
                     </div>

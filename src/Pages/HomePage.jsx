@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import '../Styles/HomePage.css';
+import queryString from "query-string"
 import Header from '../Components/Header';
 import Devices from '../Components/Devices';
 import LoadingScreen from 'react-loading-screen';
 import Logo from '../assets/rachio-logo.png';
 import DeviceMapContainer from '../Components/DeviceMapContainer';
+
 
 class HomePage extends Component {
     constructor() {
@@ -24,9 +26,11 @@ class HomePage extends Component {
     };
 
     getUserData() {
-
-        fetch("https://api.rach.io/1/public/person/2ee8a9ca-741d-4b1a-add3-8a7683e5aa28", {
-            headers: { "Authorization": "Bearer 76980330-8f0b-4659-a341-527364acf134" }
+        let parsed = queryString.parse(window.location.search)
+        let person_id = parsed.person_id
+        let auth_bearer = parsed.auth_bearer
+        fetch(`https://api.rach.io/1/public/person/${person_id}`, {
+            headers: { "Authorization": `Bearer ${auth_bearer}` }
         })
             .then(response => {
                 return response.json()
@@ -80,6 +84,7 @@ class HomePage extends Component {
                     textColor='#676767'
                     logoSrc={Logo}
                     text="Pssst.... It's me your lawn. I'm thirsty!"
+                    children=''
                 >
                 </LoadingScreen>
             )
