@@ -26,20 +26,20 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.281), 0 8px 16px rgba(0, 0, 0, 0.39);
     border-radius: .5rem;
     cursor: pointer;
-  }
-  
-  .login-button:hover {
+}
+
+.login-button:hover {
     background-color: rgb(1, 153, 204);
-  }
+}
 
-  .login-button p {
-      margin: auto;
-  }
+.login-button p {
+    margin: auto;
+}
 
-  .name-logo {
-      margin: 2rem;
-  }
+.name-logo {
+    margin: 2rem;
+}
 
-  .logo {
-      margin: auto;
-  }
+.logo {
+    margin: auto;
+}

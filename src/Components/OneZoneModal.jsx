@@ -5,8 +5,8 @@ class OneZoneModal extends Component {
         super(props);
         this.state = {
             time: 0,
-        };
-    }
+        }
+    };
 
     handleSubmit = (e) => {
         e.preventDefault();
@@ -17,41 +17,41 @@ class OneZoneModal extends Component {
         }
         this.props.runZone(runZoneInfo)
             .then(this.props.closeOneZoneModal.bind(this))
-    }
+    };
 
     IncrementItem = () => {
         this.setState({ time: this.state.time + 1 });
-    }
+    };
 
     DecreaseItem = () => {
         if (this.state.time === 0) {
         } else {
             this.setState({ time: this.state.time - 1 });
         }
-    }
+    };
 
     render() {
         const zoneName = this.props.zoneName;
 
         return (
-            <div className='time-modal'>
-                <div className='time-add'>
-                    <div className='time-header'>
+            <div className="time-modal">
+                <div className="time-add">
+                    <div className="time-header">
                         <h1>Run {zoneName}</h1>
                     </div>
-                    <div className='time-modal-time'>
+                    <div className="time-modal-time">
                         <h3>Run Time</h3>
-                        <div className='add-time-container'>
-                            <div className='minutes'>
+                        <div className="add-time-container">
+                            <div className="minutes">
                                 <h1>{this.state.time} Minutes</h1>
                             </div>
-                            <div className='add-time-buttons'>
+                            <div className="add-time-buttons">
                                 <div className="time-button" onClick={this.IncrementItem}>+</div>
                                 <div className="time-button" onClick={this.DecreaseItem}>-</div>
                             </div>
                         </div>
                     </div>
-                    <div className='time-modal-buttons'>
+                    <div className="time-modal-buttons">
                         <div
                             className="run-zone-button"
                             onClick={this.props.closeOneZoneModal.bind(this)}
@@ -69,6 +69,6 @@ class OneZoneModal extends Component {
             </div>
         );
     }
-}
+};
 
 export default OneZoneModal;

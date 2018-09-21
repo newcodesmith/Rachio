@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Address from './Address';
-import DeviceStatus from './DeviceStatus';
-import { Link } from 'react-router-dom';
+import Address from "./Address";
+import DeviceStatus from "./DeviceStatus";
+import { Link } from "react-router-dom";
 
 class Devices extends Component {
 
@@ -11,13 +11,12 @@ class Devices extends Component {
             lng: deviceInfo.longitude
         }
         this.props.handleDeviceClick(deviceClicked)
-    }
+    };
 
     render() {
         const deviceData = this.props.deviceData;
 
         return (
-
             deviceData.sort(function (a, b) {
                 let nameA = a.name.toUpperCase();
                 let nameB = b.name.toUpperCase();
@@ -31,9 +30,9 @@ class Devices extends Component {
             }).map(deviceInfo => {
                 return (
                     <div key={deviceInfo.id}
-                        className='device-container'
+                        className="device-container"
                     >
-                        <div className='device-header'>
+                        <div className="device-header">
                             <h1>{deviceInfo.name}</h1>
                             <DeviceStatus
                                 status={deviceInfo.status}
@@ -63,14 +62,13 @@ class Devices extends Component {
                                         Device Info
                                 </Link>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-                )
+                );
             })
-        )
+        );
     }
-}
+};
 
 export default Devices;

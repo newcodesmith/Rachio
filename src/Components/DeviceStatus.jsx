@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class DeviceStatus extends Component {
     render() {
-        const status = this.props.status
+        const status = this.props.status;
 
         if (status === "OFFLINE") {
             return (
@@ -19,6 +19,6 @@ class DeviceStatus extends Component {
             </div>
         )
     }
-}
+};
 
 export default DeviceStatus;

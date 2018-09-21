@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import LastWateredDate from './LastWateredDate';
+import LastWateredDate from "./LastWateredDate";
 
 class DeviceZones extends Component {
 
@@ -8,12 +8,12 @@ class DeviceZones extends Component {
         return (
             zones.sort((a, b) => parseFloat(a.zoneNumber) - parseFloat(b.zoneNumber)).map(zone => {
                 return (
-                    <div key={zone.id} className='device-zone'>
+                    <div key={zone.id} className="device-zone">
                         <div>
-                            <div className='device-zone-img-container'>
+                            <div className="device-zone-img-container">
                                 <img src={zone.imageUrl} alt="Zone Image" />
                             </div>
-                            <div className='device-zone-info'>
+                            <div className="device-zone-info">
                                 <h3>{zone.name}</h3>
                             </div>
                             <div>
@@ -32,7 +32,7 @@ class DeviceZones extends Component {
                 )
             })
         );
-    }
+    };
 }
 
 export default DeviceZones;

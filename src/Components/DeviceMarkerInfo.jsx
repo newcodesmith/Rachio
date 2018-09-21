@@ -8,6 +8,6 @@ class DeviceMarkerInfo extends Component {
             </div>
         );
     }
-}
+};
 
 export default DeviceMarkerInfo;

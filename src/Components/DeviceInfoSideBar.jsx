@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import DeviceStatus from "./DeviceStatus.jsx";
 import DeviceImage from "./DeviceImage.jsx";
-import InfoPageAddress from './InfoPageAddress.jsx'
+import InfoPageAddress from "./InfoPageAddress.jsx"
 
 class DeviceInfoSideBar extends Component {
     render() {
         const device = this.props.device;
         return (
-            <div className='device-info-sidebar'>
-                <div className='device-header'>
+            <div className="device-info-sidebar">
+                <div className="device-header">
                     <h1>{device.name}</h1>
                     <DeviceStatus
                         status={device.status}
                     />
                 </div>
                 <DeviceImage
-                    className='device-image'
+                    className="device-image"
                     deviceModel={device.model}
                 />
                 <InfoPageAddress
@@ -35,6 +35,6 @@ class DeviceInfoSideBar extends Component {
             </div>
         );
     }
-}
+};
 
 export default DeviceInfoSideBar;

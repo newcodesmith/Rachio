@@ -7,7 +7,7 @@ class InfoPageAddress extends Component {
         this.state = {
             "address": []
         }
-    }
+    };
 
     getAddress() {
         const latitude = this.props.latitude
@@ -24,14 +24,14 @@ class InfoPageAddress extends Component {
                 console.error(error);
             }
         );
-    }
+    };
 
     componentDidMount() {
         this.getAddress();
-    }
+    };
 
     render() {
-        const deviceId = this.props.deviceId
+        const deviceId = this.props.deviceId;
 
         if (!this.state.address) {
             return <div />
@@ -42,6 +42,6 @@ class InfoPageAddress extends Component {
             </div>
         );
     }
-}
+};
 
 export default InfoPageAddress;

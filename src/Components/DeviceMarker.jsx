@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Marker } from "react-google-maps";
-import RachioMarker from '../assets/rachio-marker.png';
+import RachioMarker from "../assets/rachio-marker.png";
 
 class DeviceMarker extends Component {
     constructor() {
@@ -21,6 +21,6 @@ class DeviceMarker extends Component {
             </Marker>
         );
     }
-}
+};
 
 export default DeviceMarker;

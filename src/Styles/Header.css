@@ -9,11 +9,10 @@
     top: 0;
     width: 100%;
     z-index: 100;
-  }
+}
 
 .nav-logo img {
     margin: 1rem;
-    
 }
 
 .nav-buttons {
@@ -30,11 +29,9 @@
     text-align: center;
     cursor: pointer;
     list-style-type: none;
+}
 
-  }
-  
 .nav-buttons p:hover {
     color: #f1f1f1;
     text-decoration: underline;
-  
-  }
+}

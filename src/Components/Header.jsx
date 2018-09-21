@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import '../Styles/Header.css';
-import NameLogo from '../assets/rachio-name-logo1.png';
+import "../Styles/Header.css";
+import NameLogo from "../assets/rachio-name-logo1.png";
 
 class Header extends Component {
     render() {
@@ -16,6 +16,6 @@ class Header extends Component {
             </div>
         );
     }
-}
+};
 
 export default Header;

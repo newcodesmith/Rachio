@@ -1,18 +1,17 @@
 import React, { Component } from "react";
 import Geocode from "react-geocode";
 
-
 class Address extends Component {
     constructor() {
         super();
         this.state = {
             "address": []
         }
-    }
+    };
 
     getAddress() {
-        const latitude = this.props.latitude
-        const longitude = this.props.longitude
+        const latitude = this.props.latitude;
+        const longitude = this.props.longitude;
 
         Geocode.setApiKey("AIzaSyCrrwvKb76YQoqkyv2O6BnjBE5Ib_j-b7A");
 
@@ -25,14 +24,14 @@ class Address extends Component {
                 console.error(error);
             }
         );
-    }
+    };
 
     componentDidMount() {
         this.getAddress();
-    }
+    };
 
     render() {
-        const deviceId = this.props.deviceId
+        const deviceId = this.props.deviceId;
 
         if (!this.state.address) {
             return <div />
@@ -43,6 +42,6 @@ class Address extends Component {
             </div>
         );
     }
-}
+};
 
 export default Address;

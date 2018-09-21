@@ -11,6 +11,6 @@ class LastWateredDate extends Component {
             </div>
         );
     }
-}
+};
 
 export default LastWateredDate;

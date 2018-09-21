@@ -29,7 +29,7 @@
 .device-sidebar-button-show {
     background-color: rgb(0, 167, 225);
     width: 4rem;
-    height:10.4rem;
+    height: 10.4rem;
     right: 0;
     top: 5rem;
     margin: .2rem .5rem .3rem .2rem;
@@ -47,7 +47,6 @@
 .device-sidebar-button-hide {
     margin: .2rem .5rem .3rem .2rem;
 }
-
 
 .device-sidebar-button-hide p,
 .device-sidebar-button-show p {

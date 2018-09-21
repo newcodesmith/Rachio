@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import '../Styles/HomePage.css';
+import "../Styles/HomePage.css";
 import queryString from "query-string"
-import Header from '../Components/Header';
-import Devices from '../Components/Devices';
-import LoadingScreen from 'react-loading-screen';
-import Logo from '../assets/rachio-logo.png';
-import DeviceMapContainer from '../Components/DeviceMapContainer';
-
+import Header from "../Components/Header";
+import Devices from "../Components/Devices";
+import LoadingScreen from "react-loading-screen";
+import Logo from "../assets/rachio-logo.png";
+import DeviceMapContainer from "../Components/DeviceMapContainer";
 
 class HomePage extends Component {
     constructor() {
@@ -14,10 +13,10 @@ class HomePage extends Component {
         this.state = {
             userData: null,
             isShown: false,
-            sideBar: 'devices-sidebar-hide',
-            sideBarButton: 'device-sidebar-button-hide',
-            sideBarButtonTitle: 'Show Devices',
-            zoom:5,
+            sideBar: "devices-sidebar-hide",
+            sideBarButton: "device-sidebar-button-hide",
+            sideBarButtonTitle: "Show Devices",
+            zoom: 5,
             center: {
                 lat: 39.0997,
                 lng: -94.5786
@@ -26,9 +25,9 @@ class HomePage extends Component {
     };
 
     getUserData() {
-        let parsed = queryString.parse(window.location.search)
-        let person_id = parsed.person_id
-        let auth_bearer = parsed.auth_bearer
+        let parsed = queryString.parse(window.location.search);
+        let person_id = parsed.person_id;
+        let auth_bearer = parsed.auth_bearer;
         fetch(`https://api.rach.io/1/public/person/${person_id}`, {
             headers: { "Authorization": `Bearer ${auth_bearer}` }
         })
@@ -46,19 +45,19 @@ class HomePage extends Component {
         if (!this.state.isShown) {
             this.setState({
                 isShown: true,
-                sideBar: 'devices-sidebar-show',
-                sideBarButton: 'device-sidebar-button-show',
-                sideBarButtonTitle: 'Hide Devices',
+                sideBar: "devices-sidebar-show",
+                sideBarButton: "device-sidebar-button-show",
+                sideBarButtonTitle: "Hide Devices",
             })
         } else {
             this.setState({
                 isShown: false,
-                sideBar: 'devices-sidebar-hide',
-                sideBarButton: 'device-sidebar-button-hide',
-                sideBarButtonTitle: 'Show Devices',
+                sideBar: "devices-sidebar-hide",
+                sideBarButton: "device-sidebar-button-hide",
+                sideBarButtonTitle: "Show Devices",
             })
         }
-    }
+    };
 
     handleDeviceClick = (deviceClicked) => {
         this.setState({
@@ -68,7 +67,7 @@ class HomePage extends Component {
                 lng: deviceClicked.lng
             }
         })
-    }
+    };
 
     componentDidMount() {
         this.getUserData();
@@ -79,23 +78,23 @@ class HomePage extends Component {
             return (
                 <LoadingScreen
                     loading={true}
-                    bgColor='#00000'
-                    spinnerColor='#9ee5f8'
-                    textColor='#676767'
+                    bgColor="#00000"
+                    spinnerColor="#9ee5f8"
+                    textColor="#676767"
                     logoSrc={Logo}
-                    text="Pssst.... It's me your lawn. I'm thirsty!"
-                    children=''
+                    text="Pssst.... It's me your lawn.I'm thirsty!"
+                    children=""
                 >
                 </LoadingScreen>
             )
-        }
+        };
         return (
             <div>
                 <Header
                     userName={this.state.userData.fullName}
                 />
                 <div className={this.state.sideBar}>
-                <div className="spacer"></div>
+                    <div className="spacer"></div>
 
                     <div
                         onClick={this.handleClickSideBar}
@@ -117,9 +116,8 @@ class HomePage extends Component {
                     center={this.state.center}
                 />
             </div>
-
         );
     }
-}
+};
 
 export default HomePage;
