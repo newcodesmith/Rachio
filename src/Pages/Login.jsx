@@ -10,7 +10,7 @@ class Login extends Component {
                 <div className="login-page" style={{ backgroundImage: "url(" + require("../assets/rachio-login.jpg") + ")" }}>
                     <img className="name-logo" src={NameLogo} alt="Rachio Logo" height="100px" />
                     <div
-                        onClick={() => window.location = "http://localhost:8888/login"}
+                        onClick={() => window.location = "/home"}
                         className="login-button">
                         <img className="logo" src={Logo} alt="Rachio Logo" height="50px" />
                         <p>Login</p>

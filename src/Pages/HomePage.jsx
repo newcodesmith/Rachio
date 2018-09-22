@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../Styles/HomePage.css";
-import queryString from "query-string"
 import Header from "../Components/Header";
 import Devices from "../Components/Devices";
 import LoadingScreen from "react-loading-screen";
@@ -25,12 +24,7 @@ class HomePage extends Component {
     };
 
     getUserData() {
-        let parsed = queryString.parse(window.location.search);
-        let person_id = parsed.person_id;
-        let auth_bearer = parsed.auth_bearer;
-        fetch(`https://api.rach.io/1/public/person/${person_id}`, {
-            headers: { "Authorization": `Bearer ${auth_bearer}` }
-        })
+        fetch("http://localhost:8888/userData")
             .then(response => {
                 return response.json()
             })
