@@ -15,6 +15,7 @@ class DevicesMapContainer extends Component {
                         loadingElement={<div style={{ height: `100%` }} />}
                         containerElement={<div style={{ height: "93vh", width: "100%" }} />}
                         mapElement={<div style={{ height: `100%` }} />}
+                        handleMarkerClick={this.props.handleMarkerClick}
                     />
                 </div>
             </div>

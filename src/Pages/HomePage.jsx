@@ -63,6 +63,15 @@ class HomePage extends Component {
         })
     };
 
+    handleMarkerClick = (deviceClicked) => {
+        this.props.history.push({
+            pathname: `/deviceInfo/${deviceClicked.id}`,
+            state: {
+                deviceInfo: deviceClicked
+            }
+        })
+    }
+
     componentDidMount() {
         this.getUserData();
     };
@@ -108,6 +117,7 @@ class HomePage extends Component {
                     devicesData={this.state.userData.devices}
                     zoom={this.state.zoom}
                     center={this.state.center}
+                    handleMarkerClick={this.handleMarkerClick}
                 />
             </div>
         );

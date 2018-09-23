@@ -11,12 +11,14 @@ class DeviceMarker extends Component {
     };
 
     render() {
+        const device = this.props.device
+        const location = this.props.location
         return (
             <Marker
-                position={this.props.location}
+                position={location}
                 icon={RachioMarker}
-                onClick={() => window.location = "/deviceInfo?" + this.props.device.id}
-                title={`${this.props.device.name} ${this.props.device.status}`}
+                onClick={() => this.props.handleMarkerClick(device)}
+                title={`${device.name} ${device.status}`}
             >
             </Marker>
         );
