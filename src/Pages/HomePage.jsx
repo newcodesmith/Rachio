@@ -70,7 +70,7 @@ class HomePage extends Component {
                 deviceInfo: deviceClicked
             }
         })
-    }
+    };
 
     componentDidMount() {
         this.getUserData();
