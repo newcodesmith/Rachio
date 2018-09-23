@@ -26,12 +26,13 @@ class HomePage extends Component {
     getUserData() {
         fetch("http://localhost:8888/userData")
             .then(response => {
-                return response.json()
+                return response.json()                
             })
             .then(data => {
                 this.setState({
                     userData: data
                 })
+                console.log(data, "hit");
             });
     };
 

@@ -6,6 +6,9 @@ import DeviceZones from "../Components/DeviceZones";
 import Weather from "../Components/Weather";
 import OneZoneModal from "../Components/OneZoneModal";
 import MultipleZoneModal from "../Components/MultipleZoneModal";
+import LoadingScreen from "react-loading-screen";
+import Logo from "../assets/rachio-logo.png";
+
 
 class DeviceInfoPage extends Component {
     constructor() {
@@ -14,8 +17,23 @@ class DeviceInfoPage extends Component {
             zoneId: null,
             zoneName: null,
             oneZoneModalIsShown: false,
-            multipleZoneModalIsShown: false
+            multipleZoneModalIsShown: false,
+            deviceData: null
         }
+    };
+
+    getDeviceInfo() {
+        const deviceId = this.props.location.state.deviceInfo.id
+        
+        fetch(`http://localhost:8888/deviceData/${deviceId}`)
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                this.setState({
+                    deviceData: data
+                })
+            });
     };
 
     runZone = (runZoneInfo) => {
@@ -66,12 +84,26 @@ class DeviceInfoPage extends Component {
 
     componentWillMount() {
         const { handle } = this.props.match.params;
-        const { deviceInfo } = this.props.location.state.deviceInfo;
+        this.getDeviceInfo()
     };
 
     render() {
-        const device = this.props.location.state.deviceInfo;
-
+        const device = this.state.deviceData;
+        
+        if (!device) {
+            return (
+                <LoadingScreen
+                    loading={true}
+                    bgColor="#00000"
+                    spinnerColor="#9ee5f8"
+                    textColor="#676767"
+                    logoSrc={Logo}
+                    text="Are you smarter than a Rachio controller?"
+                    children=""
+                >
+                </LoadingScreen>
+            )
+        };
         return (
             <div>
                 <Header />
