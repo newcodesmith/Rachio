@@ -32,7 +32,6 @@ class HomePage extends Component {
                 this.setState({
                     userData: data
                 })
-                console.log(data, "hit");
             });
     };
 
