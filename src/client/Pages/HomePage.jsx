@@ -26,7 +26,7 @@ class HomePage extends Component {
     getUserData() {
         fetch("http://localhost:8888/userData")
             .then(response => {
-                return response.json()                
+                return response.json()
             })
             .then(data => {
                 this.setState({
@@ -99,7 +99,6 @@ class HomePage extends Component {
                 />
                 <div className={this.state.sideBar}>
                     <div className="spacer"></div>
-
                     <div
                         onClick={this.handleClickSideBar}
                         className={this.state.sideBarButton}
