@@ -10,7 +10,7 @@ class Weather extends Component {
             <div className="weather-container">
                 <ReactWeather
                     forecast="5days"
-                    apikey="e73f82b08eb44e129c7152443181509"
+                    apikey=""
                     unit="imperial"
                     type="geo"
                     lat={`${device.latitude}`}

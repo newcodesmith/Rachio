@@ -13,7 +13,7 @@ class InfoPageAddress extends Component {
         const latitude = this.props.latitude
         const longitude = this.props.longitude
 
-        Geocode.setApiKey("AIzaSyCrrwvKb76YQoqkyv2O6BnjBE5Ib_j-b7A");
+        Geocode.setApiKey("");
 
         Geocode.fromLatLng(latitude, longitude).then(
             response => {

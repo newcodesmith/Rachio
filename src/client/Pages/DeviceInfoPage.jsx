@@ -40,7 +40,7 @@ class DeviceInfoPage extends Component {
         return fetch("https://api.rach.io/1/public/zone/start", {
             method: "PUT",
             headers: {
-                "Authorization": "Bearer 76980330-8f0b-4659-a341-527364acf134",
+                "Authorization": "Bearer ",
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(runZoneInfo)
@@ -54,7 +54,7 @@ class DeviceInfoPage extends Component {
         return fetch("https://api.rach.io/1/public/zone/start_multiple", {
             method: "PUT",
             headers: {
-                "Authorization": "Bearer 76980330-8f0b-4659-a341-527364acf134",
+                "Authorization": "Bearer ",
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({ zones: runZonesInfo })
